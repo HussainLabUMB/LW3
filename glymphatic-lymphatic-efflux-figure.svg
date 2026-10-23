@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1180" height="780" viewBox="0 0 1180 780" font-family="Helvetica, Arial, sans-serif">
+  <title>Glymphatic and meningeal-lymphatic efflux before and after brain injury</title>
+
+  <defs>
+    <marker id="cyanHead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#35b6c9"/>
+    </marker>
+    <marker id="leaderDot" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="4" markerHeight="4">
+      <circle cx="3" cy="3" r="2.4" fill="#1a1a1a"/>
+    </marker>
+    <radialGradient id="injuryGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#c01914" stop-opacity="0.95"/>
+      <stop offset="45%"  stop-color="#d33a30" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#e8817a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="burstGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fde79a"/>
+      <stop offset="100%" stop-color="#f0a021"/>
+    </radialGradient>
+
+    <!-- reusable block arrow: length 84, drawn from origin pointing +x -->
+    <path id="blockArrow" d="M0,-14 L46,-14 L46,-26 L84,0 L46,26 L46,14 L0,14 Z"/>
+    <!-- reusable CSF droplet -->
+    <path id="droplet" d="M0,-11 C4,-3 8,2 8,7 A8,8 0 0 1 -8,7 C-8,2 -4,-3 0,-11 Z"/>
+  </defs>
+
+  <g id="Background">
+    <rect x="0" y="0" width="1180" height="780" fill="#ffffff"/>
+  </g>
+
+  <!-- ==================== HEALTHY BRAIN (LEFT) ==================== -->
+  <g id="Brain-healthy">
+
+    <g id="CSF-halo-L" fill="none" stroke="#d6f0f2">
+      <path d="M118,240 C104,190 136,138 190,118 C250,96 322,90 376,110 C422,127 448,162 445,206
+               C442,254 404,290 348,306 C286,324 202,322 156,300 C128,287 124,266 118,240 Z"
+            stroke-width="30" opacity="0.45"/>
+      <path d="M118,240 C104,190 136,138 190,118 C250,96 322,90 376,110 C422,127 448,162 445,206
+               C442,254 404,290 348,306 C286,324 202,322 156,300 C128,287 124,266 118,240 Z"
+            stroke-width="15" opacity="0.65"/>
+      <ellipse cx="92" cy="200" rx="38" ry="46" transform="rotate(-12 92 200)" stroke-width="26" opacity="0.45"/>
+      <ellipse cx="92" cy="200" rx="38" ry="46" transform="rotate(-12 92 200)" stroke-width="13" opacity="0.65"/>
+    </g>
+
+    <g id="Brainstem-L">
+      <path d="M398,292 C430,310 470,320 520,322 L540,300 C480,300 430,286 404,278 Z"
+            fill="#f0b9b9" stroke="#d99a9a" stroke-width="2"/>
+    </g>
+
+    <g id="Cerebellum-L">
+      <ellipse cx="92" cy="200" rx="38" ry="46" transform="rotate(-12 92 200)"
+               fill="#f0b9b9" stroke="#d99a9a" stroke-width="2.5"/>
+      <g fill="none" stroke="#dc9f9f" stroke-width="1.6" stroke-linecap="round">
+        <path d="M64,176 C82,172 104,176 118,186"/>
+        <path d="M60,194 C80,190 104,194 120,204"/>
+        <path d="M62,212 C82,208 104,212 118,222"/>
+        <path d="M70,230 C88,226 106,230 116,238"/>
+      </g>
+    </g>
+
+    <g id="Cerebrum-L">
+      <path d="M118,240 C104,190 136,138 190,118 C250,96 322,90 376,110 C422,127 448,162 445,206
+               C442,254 404,290 348,306 C286,324 202,322 156,300 C128,287 124,266 118,240 Z"
+            fill="#f3c3c3" stroke="#d99a9a" stroke-width="2.5"/>
+      <g fill="none" stroke="#e5a7a7" stroke-width="1.6" stroke-linecap="round">
+        <path d="M150,150 C210,120 300,112 372,132"/>
+        <path d="M138,182 C200,152 296,144 388,166"/>
+        <path d="M132,222 C192,204 268,200 336,214"/>
+        <path d="M146,266 C206,254 274,254 330,268"/>
+        <path d="M262,300 C268,270 268,238 258,206"/>
+      </g>
+    </g>
+
+    <g id="Veins-L" fill="none" stroke="#3f63a8" stroke-linecap="round">
+      <path d="M150,206 C226,176 316,174 398,204" stroke-width="7"/>
+      <path d="M240,188 C250,224 244,258 226,288" stroke-width="5"/>
+      <path d="M316,180 C330,214 336,246 330,286" stroke-width="4"/>
+      <path d="M190,196 C186,228 176,252 160,272" stroke-width="3.5"/>
+      <path d="M372,196 C388,220 396,244 396,268" stroke-width="3"/>
+      <path d="M240,206 C262,214 282,214 300,204" stroke-width="2"/>
+      <path d="M246,246 C272,254 300,252 322,240" stroke-width="2"/>
+      <path d="M196,232 C212,240 226,242 238,238" stroke-width="2"/>
+    </g>
+
+    <g id="Lymphatics-L" fill="none" stroke="#7fbb4a" stroke-linecap="round">
+      <path d="M126,190 C176,138 268,116 372,132 C404,137 428,150 442,170" stroke-width="5.5"/>
+      <path d="M232,124 C236,148 232,166 222,182" stroke-width="3"/>
+      <path d="M316,120 C322,146 318,166 308,182" stroke-width="3"/>
+      <path d="M396,140 C404,164 402,182 394,196" stroke-width="3"/>
+      <path d="M170,150 C168,172 162,188 152,200" stroke-width="2.6"/>
+      <path d="M442,170 C452,214 448,258 452,300" stroke-width="5.5"/>
+      <path d="M120,196 C104,214 96,238 96,262" stroke-width="4"/>
+    </g>
+
+    <g id="Efflux-arrows-L">
+      <use xlink:href="#blockArrow" transform="translate(340,196) rotate(168) scale(0.95)" fill="#64b0b8" opacity="0.9"/>
+      <use xlink:href="#blockArrow" transform="translate(206,302) rotate(202) scale(0.7)"  fill="#64b0b8" opacity="0.9"/>
+      <use xlink:href="#blockArrow" transform="translate(296,146) rotate(32)  scale(0.78)" fill="#ffffff" stroke="#cfcfcf" stroke-width="2"/>
+      <use xlink:href="#blockArrow" transform="translate(402,196) rotate(72)  scale(0.65)" fill="#ffffff" stroke="#cfcfcf" stroke-width="2"/>
+      <use xlink:href="#blockArrow" transform="translate(124,268) rotate(200) scale(0.5)"  fill="#ffffff" stroke="#cfcfcf" stroke-width="2"/>
+      <text x="252" y="262" font-size="22" fill="#1a1a1a" text-anchor="middle">Glymphatic efflux</text>
+    </g>
+
+    <g id="CSF-droplets-L" fill="#7fd4e0">
+      <use xlink:href="#droplet" transform="translate(84,296) scale(0.9)"/>
+      <use xlink:href="#droplet" transform="translate(104,322) scale(0.7)"/>
+      <use xlink:href="#droplet" transform="translate(70,330) scale(0.55)"/>
+    </g>
+  </g>
+
+  <!-- ==================== NECK BUNDLE (LEFT / HEALTHY) ==================== -->
+  <g id="Neck-bundle-healthy">
+    <g transform="rotate(-4 512 390)">
+      <rect x="486" y="300" width="86" height="182" rx="40" fill="#eaf2f7" opacity="0.75" stroke="#bcd0de" stroke-width="2"/>
+      <g fill="none" stroke-linecap="round">
+        <path d="M552,306 C556,360 552,420 556,478" stroke="#d9534f" stroke-width="7"/>
+        <path d="M534,304 C538,360 534,420 538,478" stroke="#3f63a8" stroke-width="8"/>
+        <path d="M516,304 C520,360 516,420 520,478" stroke="#d8b98d" stroke-width="4"/>
+        <path d="M506,306 C510,360 506,420 510,478" stroke="#d8b98d" stroke-width="4"/>
+      </g>
+    </g>
+    <g id="Lymph-vessel-L" fill="none" stroke="#7fbb4a" stroke-width="7" stroke-linecap="round">
+      <path d="M456,300 C444,340 464,372 454,412 C446,444 460,458 452,492"/>
+    </g>
+    <ellipse cx="478" cy="356" rx="14" ry="19" transform="rotate(18 478 356)" fill="#a9d474" stroke="#7fbb4a" stroke-width="2"/>
+    <ellipse cx="470" cy="424" rx="11" ry="15" transform="rotate(12 470 424)" fill="#a9d474" stroke="#7fbb4a" stroke-width="2"/>
+    <g fill="#7fd4e0">
+      <use xlink:href="#droplet" transform="translate(452,508) scale(0.8)"/>
+      <use xlink:href="#droplet" transform="translate(470,528) scale(0.6)"/>
+    </g>
+    <rect id="Inset-marker-L" x="494" y="356" width="36" height="42" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+  </g>
+
+  <!-- ==================== ANATOMY LABELS ==================== -->
+  <g id="Anatomy-labels" font-size="21" fill="#1a1a1a">
+    <g stroke="#1a1a1a" stroke-width="1.4" fill="none">
+      <path d="M596,330 L560,318"/>
+      <path d="M596,362 L540,352"/>
+      <path d="M596,394 L556,388"/>
+      <path d="M596,426 L570,418"/>
+      <path d="M596,458 L470,440"/>
+    </g>
+    <text x="604" y="336">Carotid sheath</text>
+    <text x="604" y="368">Cranial nerve</text>
+    <text x="604" y="400">Vein</text>
+    <text x="604" y="432">Artery</text>
+    <text x="604" y="464">Lymphatic vessel</text>
+    <g stroke-width="4" stroke-linecap="round">
+      <line x1="770" y1="362" x2="792" y2="362" stroke="#d8b98d"/>
+      <line x1="668" y1="394" x2="690" y2="394" stroke="#3f63a8"/>
+      <line x1="674" y1="426" x2="696" y2="426" stroke="#d9534f"/>
+      <line x1="792" y1="458" x2="814" y2="458" stroke="#7fbb4a"/>
+    </g>
+  </g>
+
+  <!-- ==================== INJURED BRAIN (RIGHT) ==================== -->
+  <g id="Brain-injured" transform="translate(560,0)">
+
+    <g id="CSF-halo-R" fill="none" stroke="#d6f0f2">
+      <path d="M118,240 C104,190 136,138 190,118 C250,96 322,90 376,110 C422,127 448,162 445,206
+               C442,254 404,290 348,306 C286,324 202,322 156,300 C128,287 124,266 118,240 Z"
+            stroke-width="30" opacity="0.35"/>
+      <path d="M118,240 C104,190 136,138 190,118 C250,96 322,90 376,110 C422,127 448,162 445,206
+               C442,254 404,290 348,306 C286,324 202,322 156,300 C128,287 124,266 118,240 Z"
+            stroke-width="15" opacity="0.5"/>
+      <ellipse cx="92" cy="200" rx="38" ry="46" transform="rotate(-12 92 200)" stroke-width="26" opacity="0.35"/>
+      <ellipse cx="92" cy="200" rx="38" ry="46" transform="rotate(-12 92 200)" stroke-width="13" opacity="0.5"/>
+    </g>
+
+    <g id="Brainstem-R">
+      <path d="M398,292 C430,310 470,320 520,322 L540,300 C480,300 430,286 404,278 Z"
+            fill="#f0b9b9" stroke="#d99a9a" stroke-width="2"/>
+    </g>
+
+    <g id="Cerebellum-R">
+      <ellipse cx="92" cy="200" rx="38" ry="46" transform="rotate(-12 92 200)"
+               fill="#f0b9b9" stroke="#d99a9a" stroke-width="2.5"/>
+      <g fill="none" stroke="#dc9f9f" stroke-width="1.6" stroke-linecap="round">
+        <path d="M64,176 C82,172 104,176 118,186"/>
+        <path d="M60,194 C80,190 104,194 120,204"/>
+        <path d="M62,212 C82,208 104,212 118,222"/>
+        <path d="M70,230 C88,226 106,230 116,238"/>
+      </g>
+    </g>
+
+    <g id="Cerebrum-R">
+      <path d="M118,240 C104,190 136,138 190,118 C250,96 322,90 376,110 C422,127 448,162 445,206
+               C442,254 404,290 348,306 C286,324 202,322 156,300 C128,287 124,266 118,240 Z"
+            fill="#f3c3c3" stroke="#d99a9a" stroke-width="2.5"/>
+      <g fill="none" stroke="#e5a7a7" stroke-width="1.6" stroke-linecap="round">
+        <path d="M150,150 C210,120 300,112 372,132"/>
+        <path d="M138,182 C200,152 296,144 388,166"/>
+        <path d="M132,222 C192,204 268,200 336,214"/>
+        <path d="M146,266 C206,254 274,254 330,268"/>
+        <path d="M262,300 C268,270 268,238 258,206"/>
+      </g>
+    </g>
+
+    <g id="Injury-lesion">
+      <ellipse cx="286" cy="150" rx="96" ry="66" fill="url(#injuryGrad)"/>
+      <ellipse cx="286" cy="150" rx="52" ry="36" fill="#b8140f" opacity="0.75"/>
+    </g>
+
+    <g id="Veins-R" fill="none" stroke="#3f63a8" stroke-linecap="round">
+      <path d="M150,206 C226,176 316,174 398,204" stroke-width="7"/>
+      <path d="M240,188 C250,224 244,258 226,288" stroke-width="5"/>
+      <path d="M316,180 C330,214 336,246 330,286" stroke-width="4"/>
+      <path d="M190,196 C186,228 176,252 160,272" stroke-width="3.5"/>
+      <path d="M372,196 C388,220 396,244 396,268" stroke-width="3"/>
+      <path d="M246,246 C272,254 300,252 322,240" stroke-width="2"/>
+      <path d="M196,232 C212,240 226,242 238,238" stroke-width="2"/>
+    </g>
+
+    <g id="Lymphatics-R" fill="none" stroke="#7fbb4a" stroke-linecap="round">
+      <path d="M126,190 C176,138 268,116 372,132 C404,137 428,150 442,170" stroke-width="5.5"/>
+      <path d="M232,124 C236,148 232,166 222,182" stroke-width="3"/>
+      <path d="M316,120 C322,146 318,166 308,182" stroke-width="3"/>
+      <path d="M396,140 C404,164 402,182 394,196" stroke-width="3"/>
+      <path d="M442,170 C452,214 448,258 452,300" stroke-width="5.5"/>
+      <path d="M120,196 C104,214 96,238 96,262" stroke-width="4"/>
+    </g>
+
+    <g id="Efflux-arrows-R">
+      <use xlink:href="#blockArrow" transform="translate(322,204) rotate(168) scale(0.6)" fill="#64b0b8" opacity="0.9"/>
+      <use xlink:href="#blockArrow" transform="translate(196,296) rotate(202) scale(0.42)" fill="#64b0b8" opacity="0.9"/>
+      <use xlink:href="#blockArrow" transform="translate(300,150) rotate(38) scale(0.5)" fill="#ffffff" stroke="#cfcfcf" stroke-width="2.5"/>
+      <use xlink:href="#blockArrow" transform="translate(404,200) rotate(74) scale(0.45)" fill="#ffffff" stroke="#cfcfcf" stroke-width="2.5"/>
+      <text x="238" y="266" font-size="22" fill="#1a1a1a" text-anchor="middle">Glymphatic efflux</text>
+    </g>
+
+    <g id="CSF-droplets-R" fill="#7fd4e0">
+      <use xlink:href="#droplet" transform="translate(86,300) scale(0.6)"/>
+      <use xlink:href="#droplet" transform="translate(104,320) scale(0.42)"/>
+    </g>
+
+    <g id="Brain-injury-burst">
+      <path d="M300,64 L318,10 L332,58 L372,20 L358,68 L410,54 L372,90 L424,96 L374,116 L414,148
+               L362,138 L370,186 L336,150 L322,196 L306,148 L268,178 L276,130 L232,142 L262,106
+               L214,96 L262,80 L232,44 L280,56 Z"
+            transform="translate(58,-6) scale(0.92)" fill="url(#burstGrad)" stroke="#e08a12" stroke-width="2"/>
+      <text x="200" y="46" font-size="23" fill="#1a1a1a">Brain injury</text>
+    </g>
+  </g>
+
+  <!-- ==================== NECK BUNDLE (RIGHT / INJURED) ==================== -->
+  <g id="Neck-bundle-injured" transform="translate(560,0)">
+    <g transform="rotate(-4 512 390)">
+      <rect x="486" y="300" width="86" height="182" rx="40" fill="#eaf2f7" opacity="0.75" stroke="#bcd0de" stroke-width="2"/>
+      <g fill="none" stroke-linecap="round">
+        <path d="M552,306 C556,360 552,420 556,478" stroke="#d9534f" stroke-width="7"/>
+        <path d="M534,304 C538,360 534,420 538,478" stroke="#3f63a8" stroke-width="8"/>
+        <path d="M516,304 C520,360 516,420 520,478" stroke="#d8b98d" stroke-width="4"/>
+        <path d="M506,306 C510,360 506,420 510,478" stroke="#d8b98d" stroke-width="4"/>
+      </g>
+    </g>
+    <g fill="none" stroke="#7fbb4a" stroke-width="5.5" stroke-linecap="round">
+      <path d="M456,300 C446,340 462,372 454,412 C448,444 458,458 452,492"/>
+    </g>
+    <ellipse cx="478" cy="356" rx="12" ry="16" transform="rotate(18 478 356)" fill="#a9d474" stroke="#7fbb4a" stroke-width="2"/>
+    <ellipse cx="470" cy="424" rx="9" ry="12" transform="rotate(12 470 424)" fill="#a9d474" stroke="#7fbb4a" stroke-width="2"/>
+    <g fill="#7fd4e0">
+      <use xlink:href="#droplet" transform="translate(452,506) scale(0.55)"/>
+    </g>
+    <rect x="494" y="356" width="36" height="42" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+  </g>
+
+  <g id="Reduced-efflux-labels" font-size="22" fill="#1a1a1a">
+    <text x="890" y="352">&#8595; Glymphatic efflux</text>
+    <text x="890" y="384">&#8595; Lymphatic efflux</text>
+    <line x1="1064" y1="344" x2="1010" y2="326" stroke="#1a1a1a" stroke-width="1.4"/>
+    <text x="1052" y="530" font-size="20">Lymphatic efflux</text>
+    <line x1="1046" y1="524" x2="1016" y2="506" stroke="#1a1a1a" stroke-width="1.4"/>
+  </g>
+
+  <!-- ==================== ZOOM CONES ==================== -->
+  <g id="Zoom-cones" fill="#ebebeb" stroke="#dcdcdc" stroke-width="1">
+    <path d="M494,358 L340,504 L340,672 L494,398 Z"/>
+    <path d="M1054,358 L920,504 L920,672 L1054,398 Z"/>
+  </g>
+
+  <!-- ==================== INSET: HEALTHY VESSEL ==================== -->
+  <g id="Inset-healthy">
+    <rect x="100" y="500" width="240" height="210" fill="#ffffff" stroke="#1a1a1a" stroke-width="2.5"/>
+    <g clip-path="none">
+      <path d="M104,652 C146,642 188,652 216,684 L216,706 L104,706 Z" fill="#efe4d2" stroke="#d9c8ad" stroke-width="1.6"/>
+      <path d="M104,668 C146,660 182,670 206,696" fill="none" stroke="#e2d3b8" stroke-width="1.6"/>
+    </g>
+    <g id="Vessel-healthy">
+      <path d="M262,502 C246,548 272,578 236,608 C210,630 190,654 188,690"
+            fill="none" stroke="#7fbb4a" stroke-width="18" stroke-linecap="round"/>
+      <path d="M262,502 C246,548 272,578 236,608 C210,630 190,654 188,690"
+            fill="none" stroke="#eaf6e0" stroke-width="9" stroke-linecap="round"/>
+      <g fill="none" stroke="#7fbb4a" stroke-width="2.6">
+        <path d="M250,548 L258,556 L246,566"/>
+        <path d="M228,616 L238,622 L228,634"/>
+      </g>
+    </g>
+    <g id="Flow-healthy" fill="none" stroke="#35b6c9" stroke-width="4.5" stroke-linecap="round" marker-end="url(#cyanHead)">
+      <path d="M258,524 C250,548 262,566 244,588"/>
+      <path d="M226,626 C212,646 198,662 194,682"/>
+      <path d="M140,684 C164,672 180,660 188,644"/>
+      <path d="M162,700 C182,690 196,678 202,664"/>
+    </g>
+  </g>
+
+  <!-- ==================== INSET: INJURED VESSEL ==================== -->
+  <g id="Inset-injured">
+    <rect x="620" y="500" width="300" height="210" fill="#ffffff" stroke="#1a1a1a" stroke-width="2.5"/>
+    <g id="Inset-injured-text" font-size="21" fill="#1a1a1a">
+      <text x="634" y="546">&#8595; Contraction</text>
+      <text x="634" y="572">&#160;&#160;&#160;amplitude</text>
+      <text x="634" y="606">&#8595; Frequency</text>
+      <text x="634" y="638">&#8595; Velocity</text>
+    </g>
+    <g clip-path="none">
+      <path d="M782,656 C820,646 856,656 880,684 L880,706 L782,706 Z" fill="#efe4d2" stroke="#d9c8ad" stroke-width="1.6"/>
+    </g>
+    <g id="Vessel-injured">
+      <path d="M906,502 C892,548 912,578 880,608 C858,630 842,654 840,690"
+            fill="none" stroke="#7fbb4a" stroke-width="14" stroke-linecap="round"/>
+      <path d="M906,502 C892,548 912,578 880,608 C858,630 842,654 840,690"
+            fill="none" stroke="#eaf6e0" stroke-width="7" stroke-linecap="round"/>
+      <g fill="none" stroke="#7fbb4a" stroke-width="2.4">
+        <path d="M896,548 L903,556 L892,566"/>
+        <path d="M872,616 L881,622 L872,634"/>
+      </g>
+      <g id="Cellular-debris" fill="#1a1a1a">
+        <circle cx="898" cy="540" r="4.2"/>
+        <circle cx="886" cy="592" r="4.8"/>
+        <circle cx="866" cy="628" r="3.8"/>
+      </g>
+    </g>
+    <g id="Flow-injured" fill="none" stroke="#35b6c9" stroke-width="3" stroke-linecap="round" marker-end="url(#cyanHead)">
+      <path d="M846,660 C840,672 838,680 838,690"/>
+      <path d="M800,682 C818,674 830,666 836,656"/>
+    </g>
+    <g id="Debris-label" font-size="20" fill="#1a1a1a">
+      <text x="742" y="678">Cellular debris</text>
+      <line x1="864" y1="672" x2="884" y2="598" stroke="#1a1a1a" stroke-width="1.4"/>
+    </g>
+  </g>
+
+  <!-- ==================== PPA FEEDBACK BAND ==================== -->
+  <g id="PPA-band">
+    <path d="M1074,470 C1090,470 1096,478 1096,492 L1096,724 C1096,738 1088,746 1074,746
+             L296,746 C282,746 274,738 274,724 L274,732 L274,724
+             L274,724 L274,724 Z" fill="none"/>
+    <path d="M1058,470 L1096,470 L1096,746 L302,746 L302,762 L252,730 L302,698 L302,714 L1058,714
+             L1058,470 Z" fill="#fbdccd"/>
+    <text x="680" y="738" font-size="23" fill="#1a1a1a" text-anchor="middle">PPA: blockage of adrenergic signalling</text>
+  </g>
+</svg>

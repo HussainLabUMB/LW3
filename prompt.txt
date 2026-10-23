@@ -1,0 +1,13 @@
+can you make a web page using the following content:
+
+C:\Users\warai\claude\Projects\rashad hussain website
+https://umb.taleo.net/careersection/som_faculty_and_post_docs/jobdetail.ftl?job=300609
+https://www.medschool.umaryland.edu/profiles/hussain-rashad/
+
+create a personal reserch lab page for Hussain Lab Neurosurgery
+
+include the phtoto of lab team, rashad hussain
+
+include research highlights, publications, etc.
+
+create website at: C:\Users\warai\claude\Projects\rashad hussain website
